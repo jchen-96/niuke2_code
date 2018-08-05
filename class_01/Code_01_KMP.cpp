@@ -11,7 +11,7 @@
 #include <iostream>
 #include <string.h>
 #include <vector>
-#include<cstdio>
+#include <cstdio>
 
 using namespace std;
 
@@ -37,13 +37,9 @@ class Code_01_KMP
             else
             {
                 if (next[i2] == -1)
-                {
                     i1++;
-                }
                 else
-                {
                     i2 = next[i2];
-                }
             }
         }
         return i2 == s2.size() ? i1 - i2 : -1;

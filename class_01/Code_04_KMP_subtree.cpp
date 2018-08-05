@@ -46,6 +46,11 @@ class Code_04_KMP_subtree
         return s += s1 + s2;
     }
 
+    // 二叉树的反序列化
+    static Node* deserialTree(string s){
+        
+    }
+
     static int kmp(string s1, string s2)
     {
         if (s1.empty() || s2.empty() || s2.size() > s1.size())
