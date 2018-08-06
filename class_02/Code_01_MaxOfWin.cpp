@@ -20,18 +20,20 @@ class Code_01_MaxOfWin
         deque<int> q;
         int r = 0;
         //窗口为[l,r]
-        while (r < win)
-        {
-            while (!q.empty() && arr[r] >= arr[q.back()])
-            {
-                q.pop_back();
-            }
-            q.push_back(r++);
-        }
+        //下面的代码可以整合到下面去
+        // while (r < win)
+        // {
+        //     while (!q.empty() && arr[r] >= arr[q.back()])
+        //     {
+        //         q.pop_back();
+        //     }
+        //     q.push_back(r++);
+        // }
         while (r < arr.size())
         {
-            res.push_back(arr[q.front()]);
-            if ((r - win) >= q.front())
+            if (r >= win)
+                res.push_back(arr[q.front()]);
+            if (!q.empty() && (r - win) >= q.front())
                 q.pop_front();
             while (!q.empty() && arr[r] >= arr[q.back()])
             {
@@ -47,7 +49,7 @@ class Code_01_MaxOfWin
 
 int main(int argc, char const *argv[])
 {
-    vector<int> res = Code_01_MaxOfWin::getMaxArr(vector<int>{1,2,3,4,5,6,7,2,1,1,0,10}, 3);
+    vector<int> res = Code_01_MaxOfWin::getMaxArr(vector<int>{4, 3, 5, 4, 3, 3, 6, 7}, 3);
     for (int i = 0; i < res.size(); i++)
     {
         cout << res[i] << " ";
