@@ -48,7 +48,7 @@ class Code_04_KMP_subtree
 
     // 二叉树的反序列化
     static Node* deserialTree(string s){
-        
+        return NULL;
     }
 
     static int kmp(string s1, string s2)
