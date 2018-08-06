@@ -31,18 +31,15 @@ class Code_01_MaxOfWin
         // }
         while (r < arr.size())
         {
-            if (r >= win)
-                res.push_back(arr[q.front()]);
-            if (!q.empty() && (r - win) >= q.front())
-                q.pop_front();
             while (!q.empty() && arr[r] >= arr[q.back()])
-            {
                 q.pop_back();
-            }
-            q.push_back(r++);
+            q.push_back(r);
+            if (q.front() == r - win)
+                q.pop_front();
+            if (r - win >= -1)
+                res.push_back(arr[q.front()]);
+            r++;
         }
-        res.push_back(arr[q.front()]);
-
         return res;
     }
 };
