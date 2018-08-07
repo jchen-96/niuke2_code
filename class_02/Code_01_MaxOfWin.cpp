@@ -13,9 +13,7 @@ public:
   static vector<int> getMaxArr(vector<int> arr, int win)
   {
     if (arr.empty() || arr.size() < win)
-    {
       return vector<int>();
-    }
     vector<int> res;
     deque<int> q;
     int r = 0;
