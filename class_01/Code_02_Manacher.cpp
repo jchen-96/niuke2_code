@@ -44,7 +44,7 @@ class Code_02_Mancaher
 
         for (int i = 0; i < str.size(); i++)
         {
-            pR[i] = right > i ? min(pR[2 * core - i], right - i) : 1; //2*core-i 对称点的索引
+            pR[i] = right > i ? min(pR[2 * core - i], right - i) : 1; // 2*core-i 对称点的索引
             while (i + pR[i] < str.size() && i - pR[i] > -1)
             {
                 if (str[i + pR[i]] == str[i - pR[i]])
