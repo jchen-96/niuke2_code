@@ -1,4 +1,5 @@
 // 给定一个一个整型矩阵,只包含0和1两种元素，求其中元素全为1的最大的矩形面积
+// 单调栈问题
 #include<vector>
 #include<stack>
 #include<algorithm>
