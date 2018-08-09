@@ -7,9 +7,6 @@
  **/
 // 解法1 构建堆
 
-class 
-
-
 class MaxTree{
 
 };

@@ -19,6 +19,7 @@ class Code_01_MaxOfWin
     {
         if (arr.empty() || arr.size() <= 1)
             return;
+            //这个地方内存有问题，感觉是不能动态分配内存，不能写arr.size()，答案是没问题，最好换成一个数据结构，替代
         vector<int> left_max(arr.size(), INT32_MIN);
         vector<int> right_max(arr.size(), INT32_MIN);
         stack<int> tem;
